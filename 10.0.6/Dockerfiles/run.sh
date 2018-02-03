@@ -5,6 +5,7 @@
 #   - Creating required folder and setup error pages for Apache
 #   - Setting environments for Apache
 #   - Editing php.ini file
+#   - Setting up owncloud
 #   - Starting Apache damon
 #
 
