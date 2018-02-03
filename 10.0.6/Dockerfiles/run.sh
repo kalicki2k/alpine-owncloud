@@ -64,7 +64,9 @@ if [[ ! -z ${APACHE_RUN_USER} ]]; then
         adduser -G ${APACHE_RUN_GROUP} -h ${DOCUMENT_ROOT} ${APACHE_RUN_USER}
     fi
 
-    chown -R ${APACHE_RUN_USER}:${APACHE_RUN_GROUP} ${DOCUMENT_ROOT}
+else
+    APACHE_RUN_USER=apache
+    APACHE_RUN_GROUP=apache
 fi
 
 #
