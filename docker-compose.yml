@@ -1,0 +1,16 @@
+version: "3"
+services:
+  mariadb:
+    image: kalicki2k/alpine-mariadb:10.1
+    restart: always
+    ports:
+      - 3306:3306
+  owncloud:
+    depends_on:
+      - mariadb
+    image: kalicki2k/alpine-owncloud:10.0.6
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/localhost
